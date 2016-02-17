@@ -1,0 +1,10 @@
+wordpress:
+  build: ./apache
+  links:
+    - db:mysql
+  ports:
+    - 8000:80
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
